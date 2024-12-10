@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Ranking</title>
+    <title>Who is the Greatest Pokémon of All Time?</title>
+    <link rel="icon" type="image/png" href="assets/pokeball.png">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div style="width: 100%; max-width: 1200px;">
         <h1>Who is the greatest Pokémon of All Time?</h1>
         <p id="intro-text">
-            Welcome to the ultimate Pokemon ranking website! This platform compiles data from all recorded VGC tournaments, 
-            analyzing performances to determine the greatest Pokemon in competitive history. Explore the table below to see how your favorites rank!
+            <p id="intro-text">
+                This website aims to answer this question!
+                This table compiles data from all recorded VGC tournaments, 
+                sourced from <a href="https://limitlessvgc.com/" target="_blank">Limitless VGC</a>.
+                It introduces a quantitative metric (<a href="#explanation-text">see here</a>) that
+                calculates how great a Pokémon is based on the entire history of competitive play.
+                Explore the table below to see how your favorites rank!
+            </p>
+            
         </p>
         <div id="filter-container">
             <select id="type-filter">
@@ -23,8 +31,14 @@
         </div>
         <div id="table-container"></div>
         <p id="explanation-text">
-            <strong>About the Greatness Metric:</strong> The greatness metric is a composite score derived from tournament performances, longevity, and title achievements 
-            across various competitive events. It provides a quantitative ranking for each Pokemon's impact on the VGC scene.
+            <strong>About the Greatness Metric:</strong> This metric takes the number of tournament wins,
+            the importance of each event, and for how long each Pokémon has been great competitively.
+            <br><br>
+            <span><strong>Formula: </strong>(Number of Events) x (Placement Points) x (Event Multiplier) x (1 + Longevity/10)</span>
+            <br>
+            <strong>Placement Points:</strong> Winner: 7pts, Runner-up: 4pts and Top-8: 1pt.
+            <strong>Event Multiplier:</strong> Worlds: 5x, Internation: 3x, National: 2x and Others: 1x
+            <strong>Longevity Bonus:</strong> For how many different generations a Pokémon got at least one Top-8 finish in any tournament.
         </p>
     </div>
 </body>
