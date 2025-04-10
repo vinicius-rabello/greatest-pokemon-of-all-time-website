@@ -131,7 +131,7 @@ async function fetchPokemonData() {
     if (generationFilter) params.append('generation', generationFilter);
 
     try {
-        const response = await fetch(`https://greatest-pokemon-of-all-time-website.onrender.com/pokemon?${params.toString()}`, {
+        const response = await fetch(`/pokemon?${params.toString()}`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
